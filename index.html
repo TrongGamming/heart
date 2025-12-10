@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hand Particles Project</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        background: #000;
+        font-family: sans-serif;
+      }
+      #canvas-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+
+      /* Camera Preview nhỏ ở góc */
+      #camera-wrapper {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        width: 200px;
+        height: 150px;
+        z-index: 10;
+        border: 2px solid #333;
+        border-radius: 10px;
+        overflow: hidden;
+        background: black;
+      }
+      #webcam-preview {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scaleX(-1); /* Lật gương */
+      }
+
+      #status-text {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: lime;
+        z-index: 10;
+        font-size: 20px;
+        font-weight: bold;
+        text-shadow: 0 0 5px black;
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-CGhgk9n3.js"></script>
+  </head>
+  <body>
+    <div id="status-text">Loading System...</div>
+
+    <div id="camera-wrapper">
+      <video id="webcam-preview" playsinline></video>
+    </div>
+
+    <div id="canvas-container"></div>
+
+  </body>
+</html>
